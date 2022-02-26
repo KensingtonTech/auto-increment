@@ -1,5 +1,5 @@
 {
-  "name": "@typegoose/auto-increment",
+  "name": "@kensingtontech/typegoose-auto-increment",
   "version": "1.2.0",
   "description": "Automaticly Increment properties",
   "main": "lib/autoIncrement.js",

@@ -39,6 +39,7 @@ export function AutoIncrementSimple(
       throw new Error(`Field "${field.field}" does not exists on the Schema!`);
     }
     // check if the field is an number
+    // if (schemaField.prototype.name !== 'SchemaNumber') {
     if (!(schemaField instanceof mongoose.Schema.Types.Number)) {
       throw new Error(`Field "${field.field}" is not an SchemaNumber!`);
     }
@@ -92,7 +93,7 @@ export function AutoIncrementID(schema: mongoose.Schema<any>, options: AutoIncre
   };
 
   // check if the field is an number
-  if (!(schema.path(opt.field) instanceof mongoose.Schema.Types.Number)) {
+  if (schema.path(opt.field).constructor.name !== 'SchemaNumber') {
     throw new Error(`Field "${opt.field}" is not an SchemaNumber!`);
   }
 
